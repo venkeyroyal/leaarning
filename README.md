@@ -1,2 +1,3 @@
 git
-git is a source code management
+git is a source code managemenat
+ssh-genkey
