@@ -1,0 +1,3 @@
+[submodule "newsubmodule"]
+	path = newsubmodule
+	url = https://github.com/venkeyroyal/newsubmodule.git
