@@ -1,3 +1,6 @@
 [submodule "newsubmodule"]
 	path = newsubmodule
 	url = https://github.com/venkeyroyal/newsubmodule.git
+[submodule "submodule1"]
+	path = submodule1
+	url = https://github.com/venkeyroyal/submodule1.git
