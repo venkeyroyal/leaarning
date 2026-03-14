@@ -1,0 +1,1 @@
+products = ['Laptop', 'Phone', 'Headphones']
