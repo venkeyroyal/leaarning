@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'FILENAME', defaultValue: 'app.py')
+        string(name: 'FILENAME', defaultValue: 'data_types.py')
     }
 
     stages {
