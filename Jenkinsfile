@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Run') {
             steps {
-                bat "python ${params.FILENAME}"
+                bat "C:\\Python312\\python.exe ${params.FILENAME}"
             }
         }
     }
