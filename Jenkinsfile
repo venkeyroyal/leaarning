@@ -1,16 +1,20 @@
-pipeline {
-    agent any
-
-    parameters {
-        string(name: 'FILENAME', defaultValue: 'Bank_Account.py')
-        string(name: 'ACCOUNT_NAME', defaultValue: 'Venky')  // user input substitute
+node {
+    stage('Checkout') {
+        git 'https://github.com/YOUR_USERNAME/jenkins-multibranch-demo.git'
     }
 
-    stages {
-        stage('Run') {
-            steps {
-                bat "C:\\Users\\VENKY\\AppData\\Local\\Programs\\Python\\Python312\\python.exe ${params.FILENAME} ${params.ACCOUNT_NAME}"
-            }
-        }
+    stage('Build') {
+        bat 'python app.py'
+    }
+
+    stage('Test') {
+        bat 'echo Testing successful'
+    }
+
+    stage('Deploy') {
+        bat 'if not exist C:\\DeployFolder mkdir C:\\DeployFolder'
+        bat 'copy app.py C:\\DeployFolder\\'
+        bat 'python C:\\DeployFolder\\app.py'
     }
 }
+ 
